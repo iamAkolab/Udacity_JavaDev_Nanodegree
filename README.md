@@ -77,3 +77,11 @@ Module 01: Security and DevOps
 
 Module 02: Career Services: LinkedIn
 * Lesson 01: Take 30 Min to Improve your LinkedIn
+
+## Part 06 (Elective): Intro to Java Programming
+Module 01: Intro to Java Programming
+* Lesson 01: Variables and Data Types. Discover the basic idea behind programing and write your first Java program. Use variables to store and retrieve information.
+* Lesson 02: Control Flow and Conditionals. Use if-else statements and switch-case statements to write Java programs to tackle any decision making scenario.
+* Lesson 03: Functions. Create functions in Java. Declare methods with input arguments and return types. Then, call the functions you create.
+* Lesson 04: Loops. Use for and while loops to iterate over a block of code. Learn how to write nested loops. Use 2D arrays to store and retrieve information.
+* Lesson 05: IntelliJ and Debugging. Prepare for your next project by installing Java and IntelliJ, debugging your code, and applying the skills learned in previous lessons.
