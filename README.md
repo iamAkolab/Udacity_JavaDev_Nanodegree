@@ -76,4 +76,4 @@ Module 01: Security and DevOps
 * Lesson 06: eCommerce Application
 
 Module 02: Career Services: LinkedIn
-Lesson 01: Take 30 Min to Improve your LinkedIn
+* Lesson 01: Take 30 Min to Improve your LinkedIn
