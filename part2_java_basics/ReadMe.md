@@ -7,12 +7,15 @@ Learn the fundamentals of Java while being introduced to a Spring Boot framework
 * Exception and IO
 
 # Big-O Notation
- Notation
-Name
-Example
-O(1)
-Constant time
-Int a = 1 + 5
+| Notation | Name   | Example   |
+| :---:    | :---:  | :---:     |
+|    O(1)  | Constant time  | Int a = 1 + 5   |
+ 
+
+
+
+
+
 O(n)
 Linear
 Search in an unsorted array.
