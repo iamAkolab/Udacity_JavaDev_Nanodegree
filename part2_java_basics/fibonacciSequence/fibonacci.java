@@ -1,3 +1,4 @@
+// Iterative
 public int fibonacciIterative(int n) {
   If(n <= 1) return n;
   Int a = 1, b = 1
@@ -10,3 +11,9 @@ public int fibonacciIterative(int n) {
 }
 
 // Recursive
+public int fibonacciRecursive(int n) {
+  int(n <= 1) {
+    return n;
+  }
+  return fibonacciRecursive(n-1) +  fibonacciRecursive(n-2);
+}
