@@ -17,5 +17,5 @@ Learn the fundamentals of Java while being introduced to a Spring Boot framework
 | O(c^n)   | Exponential    | Dynamic programming. |
 | O(n!)    | Factorial      | Permutation, dynamic programming |
 
-[https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_java_basics/bigO.png]
+![Big ONotation] (https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_java_basics/bigO.png)
 
