@@ -22,4 +22,3 @@ Learn the fundamentals of Java while being introduced to a Spring Boot framework
 <p align="center">
   <img src="https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_java_basics/bigO.png" title="hover text">
 </p>
-
