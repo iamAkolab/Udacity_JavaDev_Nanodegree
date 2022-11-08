@@ -34,7 +34,9 @@ two methods we learned from LinkedList, offerLast, and removeFirst, which are eq
 # Map and Set
 Map stores an element in key and element fashion, that is, when you store an element, you will give it a key for Map to retrieve and manipulate it easily. Set stores elements by using hashing.
 
-Two common Map implementations are HashMap and TreeMap.
+Two common Map implementations are 
+* HashMap: no order.
+* TreeMap: ordered map.
 
 Two common Set implementations are HashSet and TreeSet.
 
