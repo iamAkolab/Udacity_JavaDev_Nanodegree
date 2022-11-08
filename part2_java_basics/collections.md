@@ -32,7 +32,8 @@ two methods we learned from LinkedList, offerLast, and removeFirst, which are eq
 </p>
 
 # Map and Set
-Map stores an element in key and element fashion, that is, when you store an element, you will give it a key for Map to retrieve and manipulate it easily. Set stores elements by using hashing.
+Map stores an element in key and element fashion, that is, when you store an element, you will give it a key for Map to retrieve and manipulate it easily. 
+A Set is a collection that contains no duplicate elements Set stores elements by using hashing.
 
 Two common Map implementations are 
 * HashMap: no order.
