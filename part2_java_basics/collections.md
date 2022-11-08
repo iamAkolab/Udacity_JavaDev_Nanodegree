@@ -40,7 +40,7 @@ Two common Map implementations are
 
 Two common Set implementations are 
 * HashSet: no order
-* TreeSet.
+* TreeSet: ordered set.
 
 ## Resources:
 * Map: https://docs.oracle.com/javase/8/docs/api/java/util/Map.html
