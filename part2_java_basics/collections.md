@@ -40,7 +40,7 @@ Two common Map implementations are
 * TreeMap: ordered map.
 
 Two common Set implementations are 
-* HashSet: no order
+* HashSet: no order.
 * TreeSet: ordered set.
 
 ## Resources:
