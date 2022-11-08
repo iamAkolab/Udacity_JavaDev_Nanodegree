@@ -38,7 +38,9 @@ Two common Map implementations are
 * HashMap: no order.
 * TreeMap: ordered map.
 
-Two common Set implementations are HashSet and TreeSet.
+Two common Set implementations are 
+* HashSet: no order
+* TreeSet.
 
 ## Resources:
 * Map: https://docs.oracle.com/javase/8/docs/api/java/util/Map.html
