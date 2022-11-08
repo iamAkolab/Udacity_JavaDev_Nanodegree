@@ -30,3 +30,14 @@ two methods we learned from LinkedList, offerLast, and removeFirst, which are eq
 <p align="center">
   <img src="https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_java_basics/StackAndQueue.png" title="Stack and Queue">
 </p>
+
+# Map and Set
+Map stores an element in key and element fashion, that is, when you store an element, you will give it a key for Map to retrieve and manipulate it easily. Set stores elements by using hashing.
+
+Two common Map implementations are HashMap and TreeMap.
+
+Two common Set implementations are HashSet and TreeSet.
+
+## Resources:
+* Map: https://docs.oracle.com/javase/8/docs/api/java/util/Map.html
+* Set: https://docs.oracle.com/javase/8/docs/api/java/util/Set.html
