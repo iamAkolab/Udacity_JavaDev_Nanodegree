@@ -12,3 +12,8 @@ A[10] = 10;
 ## Resources:
 * ArrayList: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 * LinkedList: https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html
+
+
+<p align="center">
+  <img src="[https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_java_basics/StackAndQueue.png]" title="hover text">
+</p>
