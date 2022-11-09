@@ -31,6 +31,7 @@ two methods we learned from LinkedList, offerLast, and removeFirst, which are eq
   <img src="https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_java_basics/StackAndQueue.png" title="Stack and Queue">
 </p>
 
+
 # Map and Set
 Map stores an element in key and element fashion, that is, when you store an element, you will give it a key for Map to retrieve and manipulate it easily. 
 A Set is a collection that contains no duplicate elements Set stores elements by using hashing.
