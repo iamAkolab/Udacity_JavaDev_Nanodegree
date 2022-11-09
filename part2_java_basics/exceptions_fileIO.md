@@ -78,5 +78,5 @@ When we use a buffer what happens is that each character is stored in the buffer
 
 Java BufferedReader class is used to read the text from a character-based input stream. It can be used to read data line by line by readLine() method, it can also be used to read data character by character by read() method. By sure to close bufferreader as well if you finish use it.
   
- # Resources:
+## Resources:
 BufferedReader: https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html
