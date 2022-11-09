@@ -64,7 +64,7 @@ Other professionals are collaborating on GitHub and growing their network. Submi
   * Concept 14: Interview with Art - Part 3
   * Concept 15: Participating in open source projects 2
   * Concept 16: Starring interesting repositories
-  * Concept 17: Next Steps
+  * Concept 17: Next Steps.
 
 ## Part 05 : Security and DevOps
 Module 01: Security and DevOps
