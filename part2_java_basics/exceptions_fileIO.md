@@ -68,3 +68,15 @@ FileReader is used to read character-oriented data from a file and FileWriter cl
 * FileOutputStream: https://docs.oracle.com/javase/8/docs/api/?java/io/FileOutputStream.html
 * FileReader: https://docs.oracle.com/javase/9/docs/api/?java/io/FileReader.html
 * FileWriter: https://docs.oracle.com/javase/9/docs/api/?java/io/FileWriter.html
+
+# Buffer, BufferedReader
+We’ve covered stream, inputstream, outputstream, filereader and filewriter. In this video we are going to learn Buffer and BufferReader.
+
+Buffer is a region of a physical memory storage used to temporarily store data while it’s being moved from one place to another. The physical memory storage would be RAM in most case. For file IO, buffer is a storage stores part of the streamed data and feeds this to output.
+
+When we use a buffer what happens is that each character is stored in the buffer first one by one in consecutive memory locations thus converting the stream of data into a single solid value.
+
+Java BufferedReader class is used to read the text from a character-based input stream. It can be used to read data line by line by readLine() method, it can also be used to read data character by character by read() method. By sure to close bufferreader as well if you finish use it.
+  
+ # Resources:
+BufferedReader: https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html
