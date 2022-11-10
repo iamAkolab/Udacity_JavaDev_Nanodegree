@@ -25,6 +25,7 @@ public class JavaExceptionExample{
   }  
 }
   
+--------------------------------------------------------------------------------------------------------------------------------------------------------------  
 # File IO
 Here we are going to cover Java.IO. Java IO is an API that comes with Java to read and write data. Most of the applications today support IO, for instance, ask user to upload a data feed, ask user to upload a photo, generate a PDF after user complete the form, grade students’ online exam and send the report as email.
 
