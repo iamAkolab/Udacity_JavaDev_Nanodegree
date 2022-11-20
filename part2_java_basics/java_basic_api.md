@@ -1,4 +1,4 @@
-# Java Basics
+# Java Basic
 Java math, date, string and character are really basic yet useful java APIs.
 
 
