@@ -1,4 +1,4 @@
-# List
+# Lists
 In Java List is an interface, and ArrayList and LinkedList are two common implementation for List. The differences between ArrayList and LinkedList 
 are ArrayList uses dynamic array where LinkedList uses a doubly linked list to store elements. I will detail the differences next.
 
