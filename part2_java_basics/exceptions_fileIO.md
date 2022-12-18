@@ -1,4 +1,4 @@
-# Exceptions
+# Exception
 Exception is a problem that arises during run-time. Let’s try the following example in code.
 
 10 / 0
