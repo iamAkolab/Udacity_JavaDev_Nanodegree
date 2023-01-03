@@ -39,14 +39,13 @@ Module 01: Web Services and APIs
 Learn about different data stores and how to build persistence for Java applications. Work with relational and non-relational databases, and use Java to read/write and build test cases for MySQL and MongoDB.
 
 Module 01: Data Stores & Persistence
-* Lesson 01: RDBMS & JDBC: Learn the basics of a relational database, MySQL and how to use it in your java applications using JDBC.
-* Lesson 02: Java Persistence API: Learn how to write simple, maintainable and flexible persistence layer code using JPA and Spring Data JPA.
-* Lesson 03: NoSQL and MongoDB: Learn the advantages of NoSQL databases and the basics of MongoDB, a document database.
-* Lesson 04: MongoDB for Java: Learn to use MongoDB in your java applications
-* Lesson 05: Midterm: Customer Reviews API. You will build the MySQL part of persistence layer for a REST API that supports the customer reviews section of a product page in an e-commerce application.
-* Lesson 06: Final - Customer Reviews API. You will add support for sorting & filtering reviews to your e-commerce app. Polyglot persistence will be introduced with Review information residing in both MySQL and MongoDB in different shapes.
-  * Concept 01: Introduction
-  * Concept 02: Instructions
+* Lesson 01: Introduction to Data Stores & Persistence
+* Lesson 02: Data in Multitier Architecture
+* Lesson 03: Java Persistence API: Learn how to write simple, maintainable and flexible persistence layer code using JPA and Spring Data JPA.
+* Lesson 04: Connecting to Data Source. set up an external database, connect to external databases, configure and initialize multiple data sources, and configure data sources for unit tests.
+* Lesson 05:  Persistence Without JPA
+* Lesson 06: Critter Chronologer. Learn the initialization with SQL, Data Objects vs. Entities, Data Access Objects (DAOs), JdbcTemplate, and Performanc
+
 
 Module 02: Career Services: GitHub
 * Lesson 01: Optimize Your GitHub Profile
