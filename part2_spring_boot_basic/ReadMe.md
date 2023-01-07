@@ -9,4 +9,3 @@ Module 01:  Spring Boot
 * Lesson 05: Data Persistence and Security
 * Lesson 06: Testing
 * Lesson 07: Project SuoerDuperDrive
-* Lesson 08:
