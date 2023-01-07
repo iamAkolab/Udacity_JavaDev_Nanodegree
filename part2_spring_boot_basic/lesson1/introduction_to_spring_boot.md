@@ -31,3 +31,5 @@ On a professional development team, many people are involved in the choice of la
 * Project Architects who choose the technologies best suited to a project's requirements
 * Business Analysts who write technical specifications for the developers to follow.
 * Project Managers who plan development efforts.
+
+![Stakeholders](https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_spring_boot_basic/lesson1/l0-18-business-stakeholders.jpg)
