@@ -24,3 +24,10 @@ Whereas, Spring Boot brings all the functionality of Spring and some additional 
 
 This way, Spring Boot helps to speed up application development. It is a matter of software requirements to choose between Spring and Spring Boot frameworks. 
 Either of the frameworks can be used to build microservices-based web applications. However, Spring Boot helps to get things done faster.
+
+# When is Full-Stack Development with Spring Boot Appropriate?
+If you feel comfortable with Java and your environment supports it, it's a great language for any size project. But if you need ultra-high performance, a bare-metal language like C, C++, Rust, or Go might be a better choice.
+
+If your project aims to connect simultaneous users on different clients, you probably need to build a server, which Spring Boot can help with. If you're making a website with dynamic data, Spring Boot provides Thymeleaf as an HTML template engine. If you store and manage data in a database, Spring Boot supports a plethora of Java libraries that provide database access, including MyBatis, which we cover in this course. As long as you need a server, Spring Boot is probably the right choice.
+
+If you need to test your application by automating a web browser, Selenium is the industry standard. There are libraries for many languages to use Selenium, and Java is one of them. Selenium also has integrations with Spring Boot that make testing server behavior a breeze.
