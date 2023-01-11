@@ -12,7 +12,7 @@ Learn the fundamentals of Java while being introduced to a Spring Boot framework
 
 # The Structure of this Course and the Dependencies between Lessons
 
-
+![Course Structure](https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_spring_boot_basic/l0-30-course-outline.jpg)
 
 ## Course Outline
 Basics of Java server architecture, dependency management in Java, and how Spring integrates with both.
