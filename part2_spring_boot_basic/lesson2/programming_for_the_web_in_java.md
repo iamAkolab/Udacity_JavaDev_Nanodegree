@@ -9,6 +9,8 @@ This allows developers to focus on application logic and features, with HTTP req
 Spring provides additional sets of libraries that integrate with the servlet interface to provide applications with even more utilities that focus on database access, 
 security, and HTML generation, and it's the tool we'll use to build our web applications.
 
+![Java App Server](https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_spring_boot_basic/lesson2/l1-06-big-picture.jpg)
+
 # Key Terms
 HTTP Request/Response: HTTP, or HyperTextTransferProtocol, is a binary data format for communication between programs over the web. It can be broken down into two basic 
 message types: requests and responses. Clients send requests for resources to servers, which respond with the requested data. Read more about the protocol here.
