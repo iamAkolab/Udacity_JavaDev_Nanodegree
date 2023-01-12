@@ -7,6 +7,8 @@ In this lesson, you'll be introduced to the following ideas and tools:
 * Spring Starter Packs: We discuss the various "starter packs" available through Spring Boot's project generator, which can be used to quickly get up and running with a new Spring Boot project configured for specific features.
 * Maven and the POM file: We introduce Maven, a dependency management tool for Java that allows developers to easily use powerful open-source libraries in their projects. We discuss how dependencies are declared in Maven's pom.xml file.
 
+![Java Web Dev](https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_spring_boot_basic/lesson2/l1-lesson-outline.png)
+
 # Source Code
 https://github.com/udacity/nd035-c1-spring-boot-basics-examples
 
