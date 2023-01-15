@@ -1,4 +1,4 @@
-# Lesson Outline
+# Lesson Outlines
 In this lesson, you'll be introduced to the following ideas and tools:
 
 * Java Application Servers: We introduce the basics of server-side web development and how a Java Application Server simplifies things.
