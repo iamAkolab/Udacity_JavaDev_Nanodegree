@@ -1,4 +1,4 @@
-# How a Java Application Server Connects Applications to the Web
+# How a Java Application Server Connects Applications to the Web site
 
 A web server's primary role is listening for HTTP requests and handling them with application logic, sending an HTTP response to the client that indicates the 
 result of the operation. Simple HTTP servers host directories of HTML files directly, sending files in response to requests for specific URLs. This is enough 
