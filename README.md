@@ -1,8 +1,8 @@
-# Udacity Java Web Developer Nanodegree
+# Udacity Java Web Developer Nanodegrees
 
 Learn enterprise scale back-end development with Java, and be prepared for the software engineering jobs that are in demand at a majority of Fortune 500 companies like Google, Amazon, and more.
 
-# Content
+# Contents
 ## Part 01 : Welcome to the Nanodegree
 Welcome to the Nanodegree program!
 
