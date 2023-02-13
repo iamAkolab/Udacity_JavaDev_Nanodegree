@@ -1,5 +1,5 @@
 # LESSON 1
-## Introduction to Spring Boot
+## Introduction to Spring Boots
 In this lesson, you will meet your instructor, learn about the prerequisites, and discuss what web development is and how it has been accomplished.
 
 Web Development means building web applications, and in a standard web application, there are three main components:
