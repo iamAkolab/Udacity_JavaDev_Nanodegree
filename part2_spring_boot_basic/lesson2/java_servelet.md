@@ -9,6 +9,7 @@ your servlets. It interacts with each through three standard methods, init, serv
 * init is where initialization of the servlet is handled, and the server will call this method directly after instantiating the servlet.
 * destroy is where servlet resource cleanup is handled, and is called directly before the server terminates the servlet instance.
 
+![The Lifecycle of a Servlet in an Application Server](https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_spring_boot_basic/lesson2/screen-shot-2020-06-03-at-4.51.26-pm.png)
 
 ## A quick note on Java Application Files:
 When you compile a Java program and package it to be run, the Java compiler creates what is called a Java ARchive, or JAR file. This file 
