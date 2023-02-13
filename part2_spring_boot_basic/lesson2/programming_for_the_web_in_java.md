@@ -27,3 +27,10 @@ Since we're going to be building web apps with Java and Spring boot, the first s
 * Implementation can  be reeplaced
 * Apache Tomcat by Default( we also have Glassfish, Netty, WldFly)
 * Design Feature First, Choose Tools Second
+
+## Common Features for Web App
+* Database Access
+* Login Security
+* Rendering HTML
+* Logging
+* Testing
