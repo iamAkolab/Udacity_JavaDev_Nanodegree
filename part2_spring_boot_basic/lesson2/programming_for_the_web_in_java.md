@@ -34,3 +34,8 @@ Since we're going to be building web apps with Java and Spring boot, the first s
 * Rendering HTML
 * Logging
 * Testing
+
+## Using a New Tool
+* RTFM - Read The Free Manual
+* To the Google
+* Rinse and Reoeat
