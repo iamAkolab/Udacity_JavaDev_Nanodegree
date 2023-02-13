@@ -3,6 +3,8 @@
 A Java Application Server is a pluggable architecture that can host many deployed applications at once. It provides utilities like multi-threading, 
 request filtering, and resource sharing to each application. Those applications must expose endpoints that handle the requests routed to them by the server.
 
+![Java Application Server](https://github.com/iamAkolab/udacity_javadev_nanodegree/blob/main/part2_spring_boot_basic/lesson2/l1-lesson-outline.png)
+
 ## Key Terms
 * HTTP: Hypertext Transfer Protocol. A binary protocol that originally defined the mechanics of requesting and sending HTML over the internet.
 * Web Server: A program that listens for and responds to HTTP requests over the internet
