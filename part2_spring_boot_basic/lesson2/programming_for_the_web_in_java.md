@@ -20,3 +20,9 @@ security, and HTML generation, and it's the tool we'll use to build our web appl
 When building a web application, there are a lot of helpful tools that can solve common problems for you. How do you decide what you need to implement a given feature?
 
 Since we're going to be building web apps with Java and Spring boot, the first step is to research what Spring supports and recommends for that feature. Spring's website includes documentation and examples for a wide range of features and libraries, and is a great place to start. Once you've decided on a library to use, the next step is finding its website and documentation. Most open-source libraries have extensive documentation that covers getting started, usage examples, and complete references. You can use these resources to implement your feature and debug issues along the way. Finally, if you encounter issues that documentation alone can't solve, you should search Google for to find similar issues and solutions others have encountered.
+
+
+## Abstratction: Spring Boot
+* Embedded App Server
+* * Implementation can  be reeplaced
+* Apache Tomcat by Default( we also have Glassfish, Netty, WldFly)
