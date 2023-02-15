@@ -1,4 +1,4 @@
-# Java Servletss
+# Java Servlets
 
 The Servlet class is the main connection between the apps you develop and the application server they run on. By extending Servlet, 
 you can create endpoints that handle incoming requests in a way specific to your application needs, and you can map specific request 
