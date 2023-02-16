@@ -1,5 +1,5 @@
 # The Spring Framework
-1[The Spring Framework](https://video.udacity-data.com/topher/2020/June/5ed93f8f_l2-10-big-picture/l2-10-big-picture.png)
+![The Spring Framework](https://video.udacity-data.com/topher/2020/June/5ed93f8f_l2-10-big-picture/l2-10-big-picture.png)
 
 The figure above shows that Spring takes the component class files and dependency configuration from the developer and instantiates a system of Java objects with references to each other.
 
