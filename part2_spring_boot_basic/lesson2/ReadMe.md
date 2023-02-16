@@ -39,7 +39,9 @@ In this lesson, we learned about:
 * Spring framework, a family of libraries that build on the abstractions of the application server to support many third-party integrations to provide easy abstractions for common web development tasks.
 * Spring Boot, a convention-over-configuration approach to Spring app development that provides defaults for many Spring configuration options in order to provide a smoother development experience.
 * Spring Initializr, the official project generator for Spring Boot, which allows developers to specify an application's metadata and dependencies and receive a fully-configured Spring Boot project, ready for development.
-* Summary - Spring Boot Dependencies
+
+
+# Summary - Spring Boot Dependencies
 * Spring Web This dependency helps to build RESTful web services using the Spring MVC. It uses Apache Tomcat as the default container.
 * Thymeleaf It is a server-side Java template engine for both web and standalone applications that allows you to show HTML web pages to a client and populate them with data directly using the server code.
 * Spring Security It is a dependency that allows custom authentication and access-control framework for the web application.
