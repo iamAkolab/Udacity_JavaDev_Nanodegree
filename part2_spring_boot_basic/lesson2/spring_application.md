@@ -49,3 +49,6 @@ Spring Boot is best experienced with the help of Spring Initializr, an official 
 * POM: The Project Object Model that Maven uses to represent the dependency and build configuration of a project. Usually, this refers to the pom.xml configuration file found in a Maven project.
 * Dependency Management System: Any tool that automates the downloading and linking of external packages to a software development project. Most languages these days either provide one officially or have a community-accepted standard.
 
+## Additional Resources
+Official Spring project generator: Spring Initializr https://start.spring.io/
+
