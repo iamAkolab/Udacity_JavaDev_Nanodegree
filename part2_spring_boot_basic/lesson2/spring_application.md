@@ -24,7 +24,7 @@ With the rise of containerized architectures like Docker, this style of applicat
 and in this course, we'll be exclusively using this mode. However, if you do want to deploy your Spring Boot application to a traditional application server, 
 there are built-in tools that allow you to package the application as a standard WAR file.
 
-Key Terms
-IoC: Inversion of Control, which is the practice of designing libraries as application runners. This allows developers to focus on application-specific logic 
+## Key Terms
+* IoC: Inversion of Control, which is the practice of designing libraries as application runners. This allows developers to focus on application-specific logic 
 and rely on IoC containers to connect application components with one another, eliminating a lot of boilerplate and encouraging a clean separation of development 
 concerns.
