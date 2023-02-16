@@ -30,3 +30,17 @@ cd nd035-c1-spring-boot-basics-examples
 # List the files in the current directory
 ls
 ```
+
+# Key Terms
+In this lesson, we learned about:
+
+* Web servers and how early servers were single-function programs that could host files, serve web pages, and expose databases to external connections.
+* Java application servers, which provides a pluggable architecture for applications to interface with, granting access to shared resources and multi-threaded request processing.
+* Spring framework, a family of libraries that build on the abstractions of the application server to support many third-party integrations to provide easy abstractions for common web development tasks.
+* Spring Boot, a convention-over-configuration approach to Spring app development that provides defaults for many Spring configuration options in order to provide a smoother development experience.
+* Spring Initializr, the official project generator for Spring Boot, which allows developers to specify an application's metadata and dependencies and receive a fully-configured Spring Boot project, ready for development.
+* Summary - Spring Boot Dependencies
+* Spring Web This dependency helps to build RESTful web services using the Spring MVC. It uses Apache Tomcat as the default container.
+* Thymeleaf It is a server-side Java template engine for both web and standalone applications that allows you to show HTML web pages to a client and populate them with data directly using the server code.
+* Spring Security It is a dependency that allows custom authentication and access-control framework for the web application.
+* MyBatis It is a persistence framework for having SQL support. MyBatis couples objects with SQL statements using an XML descriptor or annotations.
