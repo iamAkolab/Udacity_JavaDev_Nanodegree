@@ -11,7 +11,7 @@ Spring-integrated third-party tools that are available. This course focuses on a
 * Spring Security, a generic authentication library for Spring that can integrate with many different credential sources and authentication protocols to automatically manage request authentication and security contexts
 * MyBatis, a third-party database access library that provides simple SQL/Java mapping tools that can be defined in Spring components
 
-!(Frameworks)[https://miro.medium.com/max/1200/0*l_Jj0DUJFpl0uVKG]
+![Frameworks](https://miro.medium.com/max/1200/0*l_Jj0DUJFpl0uVKG)
 
 ## The End of Boilerplate: Spring Boot
 So Spring adds a lot of features, but it still sounds like a lot of configuration. We still have to deploy it to an application server, right? 
