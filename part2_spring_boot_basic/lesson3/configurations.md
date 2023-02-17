@@ -14,6 +14,6 @@ Spring's annotation-based configuration is really convenient and allows us to se
 
 We won't be using this older format in the course, but it's important to be aware of because it's still supported by Spring, and many older projects still use it. The key thing to remember is that Spring's annotation- and XML-based configuration systems are both equally capable of configuring Spring, so if you ever find yourself in a situation where you need one but only know how to do it in the other, you can always find a way to translate between them.
 
-##Key Terms
+## Key Terms
 * Legacy: In a programming context, legacy usually refers to older code that still functions or is expected to function, but is on the verge of being made obsolete by newer technologies. A legacy application is one that is no longer being actively built upon, and is instead in maintenance mode.
 * XML: eXtensible Markup Language. This is a flexible data format that allows for extension, as the name suggests. Many applications and libraries use XML as a way to store structured application data out of memory, and it's also a popular data interchange format on the web.
