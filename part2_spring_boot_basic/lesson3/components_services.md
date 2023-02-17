@@ -1,0 +1,5 @@
+If we want to declare custom classes as Spring Components, the best way to do it is to make use of @ComponentScan, an annotation that tells Spring to search your code base for classes annotated with @Component. These classes will automatically be instantiated as Spring beans, so there's no need to define an @Bean-annotated method if you already have @Component on you classes. There are other variants of @Component that identify specific roles for each component to play. We'll see some examples of these in the coming lectures, but if you want to learn more, check out the link below.
+
+One important thing to keep in mind is that @ComponentScan only marks the package of the class it's annotating for scanning - any classes outside of that package or its subpackages will be excluded by Spring. Here are the official Spring docs for @ComponentScan as well as the official Spring docs explaining the how different stereotype annotations like @Component, @Service, @Repository, and others, function.
+
+![Onion Architecture](https://user-images.githubusercontent.com/77028341/219584079-d4bcd4dc-75c2-4902-912f-5dc488d3d174.png)
