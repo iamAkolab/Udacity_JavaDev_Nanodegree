@@ -31,3 +31,14 @@ Data modeling starts with designing the database tables which are analogous to t
 * Dynamic: Something that is dynamic changes in response to external stimuli. In the case of HTML templates, dynamic sections of the template are ones that can be replaced or configured with data on-demand.
 * Static: Something that is static does not change. In the case of HTML templates, static sections of the template are the ones that cannot be changed and will be the same no matter what data is used with the template.
 * MVC: Model-View-Controller, a design pattern that emphasizes the separation of application components into those three categories or layers for more-structured user-facing application development.
+
+
+# Servers, Templates, and MVC
+There are three basic scenarios that comprise the majority of web-based user interaction flows.
+
+* The first is when a user follows a link to our application from an external source, like a marketing email or google search. This kind of cold-call request means will always be a GET request, and our application's responsibility is to choose a response template (appropriate for the request URL - you don't want to send the register.html if the link the user clicked was for /shopping-cart!) and populate it with relevant application data.
+* The second scenario is when a user navigates within our app, either by clicking a link or a button or performing some action we need to process on the server, like adding an item to their shopping cart. This case is very similar to the first, as it involves the server choosing a response template and populating it with data, but in this case, the action the user performs is completely up to us - since they're initiating the action from a web page we designed, only the actions we included in that design are available. We can use this to add additional data to requests at the template-level, for example by generating each "add item to cart" button to include the item's identifier in the request that is sent.
+* The final scenario is when the user submits completely custom data to our app using form input. This is again similar to the previous two, in that the exact shape of the form is something our template design determines, and that we still need to choose a template to send in response and the data we should use to populate this template. The main difference is that the request no longer includes "safe" data - when a user can enter any data that they'd like, our application is responsible for vetting and validating that data, showing the user an error if something goes wrong.
+
+
+These scenarios may seem simple, but they are the building blocks of web development. Regardless of the application, user interaction flows on the web are all built out of these basic building blocks.
