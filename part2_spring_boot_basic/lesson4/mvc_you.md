@@ -17,9 +17,4 @@ MVC is an abstract pattern, though, and every library implements it differently.
 
 The figure above shows the Spring MVC's architecture. The browser represents the view, and requests from the browser are user actions. When Spring MVC processes a request, it creates a Model object that represents the dynamic data associated with the view and passes it to a controller method that matches the request. The controller updates the model and chooses a template to render in response. Spring MVC passes the template and the updated model to Thymeleaf, which generates an updated view, which Spring sends in response to the browser.
 
-# Key Terms
-* MVC: MVC is an acronym that stands for Model-View-Controller, and it's a common software pattern for user interface design
-* Model: in MVC, the Model is responsible for maintaining the state of an application,
-* View: in MVC, the View is responsible for displaying the UI to the user,
-* Controller: in MVC, the Controller is responsible for processing user actions (sent from the View) to update the Model, and for forwarding those updates back to the View
-* Template: In software development, templates are used in many different contexts - in general, they are a way to define some often-repeated or reused text or code in a specific format, like HTML, along with code hooks that indicate portions of the template that should be replaced dynamically when the template is rendered. In our context, we mostly use Thymeleaf's HTML templates, which mostly look like plain HTML with a few extra Thymeleaf-specific attributes. These attributes are our code hooks, and allow us to define what data Thymeleaf uses when generating the final HTML from our template.
+
