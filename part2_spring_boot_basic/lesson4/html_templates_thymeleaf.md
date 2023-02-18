@@ -49,3 +49,7 @@ of web applications, we usually think of user actions as clicks on a web page th
 * Prototype/Wireframe In the development process for a web application, it's common to first design the full HTML and CSS for all of the screens a user is 
 expected to see. These pages have no actual functionality, and are usually called prototypes. Wireframes are an even earlier product of the design process, 
 and usually are simple images that show what the prototypes should look like.
+
+# Exercise: HTML Templates with Thymeleaf
+Let’s start with a simple example on our new webpage, simple-home.html. We have two different messages for our page, and we want to pick one or the other depending on whether we’re first landing on the page, or if we’ve submitted the form.
+
