@@ -44,5 +44,8 @@ through the template to find dynamic data expressions and resolves the variables
 result in iterated or conditional rendering in addition to more typical text replacement.
 
 ## Key Terms
-* User Action: Broadly, a user action is simply some specific action a user can take, provided by the user interface they're interacting with. In the case of web applications, we usually think of user actions as clicks on a web page that often result in a HTTP request sent to the backend.
-* Prototype/Wireframe In the development process for a web application, it's common to first design the full HTML and CSS for all of the screens a user is expected to see. These pages have no actual functionality, and are usually called prototypes. Wireframes are an even earlier product of the design process, and usually are simple images that show what the prototypes should look like.
+* User Action: Broadly, a user action is simply some specific action a user can take, provided by the user interface they're interacting with. In the case 
+of web applications, we usually think of user actions as clicks on a web page that often result in a HTTP request sent to the backend.
+* Prototype/Wireframe In the development process for a web application, it's common to first design the full HTML and CSS for all of the screens a user is 
+expected to see. These pages have no actual functionality, and are usually called prototypes. Wireframes are an even earlier product of the design process, 
+and usually are simple images that show what the prototypes should look like.
