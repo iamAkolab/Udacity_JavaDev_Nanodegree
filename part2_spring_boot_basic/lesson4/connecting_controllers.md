@@ -57,7 +57,7 @@ In both cases, we're annotating this argument with @ModelAttribute. This allows 
 # Exercise: Connecting Controllers to Templates
 This is another short HTML snippet like the one from our last exercise, but let’s make things a little trickier! This time, we have two fields and we’d like to map them to the variables on our message form called animalName and adjective.
 
-In the first <h1> element, you should list all the elements in our return list of greetings, just like we learned earlier, but this time we only want to do that if the size of our list is 5 or less. Once the list has more than 5 items in it, we want to display the second <h1> element.
+In the first h1 element, you should list all the elements in our return list of greetings, just like we learned earlier, but this time we only want to do that if the size of our list is 5 or less. Once the list has more than 5 items in it, we want to display the second h1 element.
 ```
 <body>
    <form action="#">
@@ -77,3 +77,15 @@ To complete this exercise. You need to use Thymeleaf to do four things:
 * Bind the input text to two fields called animalName and adjective.
 * Display the contents of the list greetings in the first <h1> element. You should display all the elements in the list.
 * Use conditional logic to only show the list of greetings if there are 5 or fewer messages. Otherwise, show the message ‘I think that’s enough!’
+
+## Solution
+You can see we made a few revisions to the <form> element:
+
+* We added th:action to set the target of the form submission.
+* We used th:object to bind the form to messageForm.
+* We added a method=”POST” attribute.
+* We also added the th:field attribute to our input to reference the animalName and adjective values on our messageForm.
+
+To display the list of greetings, we use th:each and set the th:text for each row to the msg value.
+
+Lastly, we use th:if and th:unless to show or hide our two text elements. Note that they don’t have to be in any particular order. th:if and th:unless both can operate independently.
