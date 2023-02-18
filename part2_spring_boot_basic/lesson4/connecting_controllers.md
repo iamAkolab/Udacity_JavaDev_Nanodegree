@@ -53,3 +53,28 @@ In both cases, we're annotating this argument with @ModelAttribute. This allows 
 
 # Key Terms
 * Form-Backing Object: This is a term used by Spring MVC and Thymeleaf to mean an object that represents the data contained in a form. On the Spring side, this is usually an additional argument to the relevant Controller method, and on the Thymeleaf side, this is referred to in the th:object attribute on the form.
+
+# Exercise: Connecting Controllers to Templates
+This is another short HTML snippet like the one from our last exercise, but let’s make things a little trickier! This time, we have two fields and we’d like to map them to the variables on our message form called animalName and adjective.
+
+In the first <h1> element, you should list all the elements in our return list of greetings, just like we learned earlier, but this time we only want to do that if the size of our list is 5 or less. Once the list has more than 5 items in it, we want to display the second <h1> element.
+```
+<body>
+   <form action="#">
+       <label for="animalText">Enter an Animal: </label>
+       <input type="text" id="animalText" name="animalText">
+       <label for="adjective">Enter an Adjective:</label>
+       <input type="text" id="adjective" name="adjective">
+       <input type="submit">
+   </form>
+   <h1>Hello, homepage!</h1>
+   <h1>I think that's enough!</h1>
+</body>
+```
+  
+To complete this exercise. You need to use Thymeleaf to do four things:
+
+* Add an action to the form that directs it to the endpoint /animal using a POST request type and binds the form data to an object called messageForm.
+* Bind the input text to two fields called animalName and adjective.
+* Display the contents of the list greetings in the first <h1> element. You should display all the elements in the list.
+* Use conditional logic to only show the list of greetings if there are 5 or fewer messages. Otherwise, show the message ‘I think that’s enough!’
