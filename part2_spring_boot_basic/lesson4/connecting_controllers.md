@@ -13,7 +13,7 @@ can automatically extract the request data into that POJO when the form is submi
 In this video, we looked at the HTML tags and Thymeleaf attribute we need to set up a form for the user to fill and submit to the server. 
 Here's the template code saw:
 ```
-  <form th:object="${newMessage}" th:action="@{/home}" action="#" method="POST">
+<form th:object="${newMessage}" th:action="@{/home}" action="#" method="POST">
     <input th:field="*{text}" type="text">
     <input type="submit">
 </form>
