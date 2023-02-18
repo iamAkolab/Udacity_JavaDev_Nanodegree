@@ -53,3 +53,35 @@ and usually are simple images that show what the prototypes should look like.
 # Exercise: HTML Templates with Thymeleaf
 Let’s start with a simple example on our new webpage, simple-home.html. We have two different messages for our page, and we want to pick one or the other depending on whether we’re first landing on the page, or if we’ve submitted the form.
 
+```
+<body>
+   <form action="#">
+       <input type="submit" value="Visit me">
+   </form>
+   <h1>Hello, homepage!</h1>
+   <h1>Welcome back!</h1>
+</body>
+```
+
+Let’s assume our web server can set a variable for us called firstVisit when the form is submitted. Your job for this exercise is to complete the following steps:
+
+* Add a Thymeleaf attribute to the form that directs it to the /simplehome endpoint when the form action is taken.
+* Make sure the form uses a POST request.
+* Use Thymeleaf condition logic to display the first message if firstVisit is true, and display the second message if firstVisit is false.
+
+## Solution
+```
+<body>
+   <form action="#" th:action="@{'/simplehome'}" method="POST">
+       <input type="submit" value="Visit me">
+   </form>
+   <h1 th:if="${firstVisit}">Hello, homepage!</h1>
+   <h1 th:unless="${firstVisit}">Welcome back!</h1>
+</body>
+```
+
+You can see we took the following steps:
+
+* Set th:action to our /simplehome endpoint
+* Set the method of our form to POST
+* Used th:if and th:unless to choose which message to display depending on the variable firstVisit.
