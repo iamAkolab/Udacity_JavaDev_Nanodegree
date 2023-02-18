@@ -73,7 +73,6 @@ In the first <h1> element, you should list all the elements in our return list o
 ```
   
 To complete this exercise. You need to use Thymeleaf to do four things:
-
 * Add an action to the form that directs it to the endpoint /animal using a POST request type and binds the form data to an object called messageForm.
 * Bind the input text to two fields called animalName and adjective.
 * Display the contents of the list greetings in the first <h1> element. You should display all the elements in the list.
