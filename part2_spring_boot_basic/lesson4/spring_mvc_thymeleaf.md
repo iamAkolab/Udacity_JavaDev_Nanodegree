@@ -21,8 +21,8 @@ Thymeleaf to generate fully functional HTML documents. Spring MVC provides a sta
 when a request comes in, which allows for a truly dynamic user experience.
 
 ```
-Data model defines how the application stores and retrieves (serialize and deserialize) the Java objects into/from the database. Data modeling starts 
-with designing the database tables which are analogous to the Java classes ("model" classes of the MVC).
+Data model defines how the application stores and retrieves (serialize and deserialize) the Java objects into/from the database. 
+Data modeling starts with designing the database tables which are analogous to the Java classes ("model" classes of the MVC).
 ```
 
 ## Key Terms
