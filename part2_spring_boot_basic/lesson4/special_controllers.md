@@ -12,3 +12,11 @@ This specific example will be relevant in the final project, but in general, be 
   <input type="submit">
 </ form>
 ```
+
+inside the java class, we have:
+```
+@PostMapping("file-upload")
+public String handleFileUpload(@RequestParam("fileUpload") MultipartFile dileUpload, Model model) {
+    InputStream fis = fileUpload.getInputStream();
+}
+```
