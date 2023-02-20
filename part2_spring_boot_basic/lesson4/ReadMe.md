@@ -1,4 +1,4 @@
-# Lesson Outline
+# Lesson OutlineS
 
 * MVC and You: We introduce the model-view-controller pattern and discuss how Spring MVC adapts it for use on the web.
 * HTML Templates and Thymeleaf: We look at how Thymeleaf's HTML templates work and how we can populate them with data using Spring controllers.
