@@ -1,4 +1,4 @@
-# Special Controller Inputs (File Upload).
+# Special Controller Inputs (File Upload)
 
 Sometimes when we build web applications with Spring, we need to account for special request types and data formats. The key takeaway from this edge case is that usually, we can accomplish this by adding the correct argument to our controller method. In this example, we looked at MultiPartFile, a special request data class provided by Spring to handle large file uploads. As with any special data type, simply by adding it as an argument to our controller method, Spring knows to treat the incoming request appropriately.
 
