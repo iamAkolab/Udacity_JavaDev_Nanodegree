@@ -12,3 +12,20 @@ Hashing and Encryption should occur in a service dedicated to that purpose, rath
 
 ## The flow of data
 Remember the separation of concerns and our onion architecture! The idea is that all user flows originate externally, travel through a controller, then through one or more services, finally through a data access bean to the database, and then all the way back up the chain. Structuring applications this way makes it easy to follow dependencies and separate concerns, so that's how we're going to build applications from now on.
+
+Hashing Implementation
+Below is an example of how to hash user passwords in the database. First, we have the User class and the UserMapper. When our UserService creates a new user, it uses a hashing service to convert the password to a hashed value before saving it.
+```
+User.java
+```
+```
+public class User {
+    private Integer userId;
+    private String username;
+    private String salt;
+    private String password;
+    private String firstName;
+    private String lastName;
+    /* constructor, getters, and setters omitted */
+}
+```
