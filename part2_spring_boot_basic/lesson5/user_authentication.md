@@ -29,3 +29,51 @@ public class User {
     /* constructor, getters, and setters omitted */
 }
 ```
+```
+UserMapper.java
+```
+```
+@Mapper
+public interface UserMapper {
+    @Select("SELECT * FROM USERS WHERE username = #{username}")
+    User getUser(String username);
+
+    @Insert("INSERT INTO USERS (username, salt, password, firstname, lastname) VALUES(#{username}, #{salt}, #{password}, #{firstName}, #{lastName})")
+    @Options(useGeneratedKeys = true, keyProperty = "userId")
+    int insert(User user);
+}
+```
+```
+Method in UserService.java
+```
+```
+public int createUser(User user) {
+    SecureRandom random = new SecureRandom();
+    byte[] salt = new byte[16];
+    random.nextBytes(salt);
+    String encodedSalt = Base64.getEncoder().encodeToString(salt);
+    String hashedPassword = hashService.getHashedValue(user.getPassword(), encodedSalt);
+    return userMapper.insert(new User(null, user.getUsername(), encodedSalt, hashedPassword, user.getFirstName(), user.getLastName()));
+}
+```
+The hashing service itself has a single method that takes some data and salt and creates a string representing the hashed value.
+* Salt: random data that is combined with the input string when hashing so that the resultant hashed values are unique for each row. This means that two users with the same password would not have the same hash in the database.
+
+```
+Method in HashService.java
+```
+```
+public String getHashedValue(String data, String salt) {
+    byte[] hashedValue = null;
+
+    KeySpec spec = new PBEKeySpec(data.toCharArray(), salt.getBytes(), 5000, 128);
+    try {
+        SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+        hashedValue = factory.generateSecret(spec).getEncoded();
+    } catch (InvalidKeySpecException | NoSuchAlgorithmException e) {
+        logger.error(e.getMessage());
+    }
+
+    return Base64.getEncoder().encodeToString(hashedValue);
+}
+```
