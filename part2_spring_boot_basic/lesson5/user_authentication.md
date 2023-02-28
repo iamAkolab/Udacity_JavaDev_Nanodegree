@@ -77,3 +77,95 @@ public String getHashedValue(String data, String salt) {
     return Base64.getEncoder().encodeToString(hashedValue);
 }
 ```
+## Authentication Implementation
+When a user logs in, we have no way to retrieve their original password, but we can re-hash their user input and see if it matches the hashed value in our database. Below is an example AuthenticationService class that implements a Spring interface, the AuthenticationProvider. This allows Spring to integrate our provider with many different authentication schemes, but we can see in our supports method that we specify that we only support UsernamePasswordAuthentication.
+
+The authenticate() method takes an Authentication object from spring and returns an authentication token if the user's credentials are correct.
+```
+AuthenticationService.java
+```
+```
+@Service
+public class AuthenticationService implements AuthenticationProvider {
+    private UserMapper userMapper;
+    private HashService hashService;
+
+    public AuthenticationService(UserMapper userMapper, HashService hashService) {
+        this.userMapper = userMapper;
+        this.hashService = hashService;
+    }
+
+    @Override
+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        String username = authentication.getName();
+        String password = authentication.getCredentials().toString();
+
+        User user = userMapper.getUser(username);
+        if (user != null) {
+            String encodedSalt = user.getSalt();
+            String hashedPassword = hashService.getHashedValue(password, encodedSalt);
+            if (user.getPassword().equals(hashedPassword)) {
+                return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
+            }
+        }
+
+        return null;
+    }
+
+    @Override
+    public boolean supports(Class<?> authentication) {
+        return authentication.equals(UsernamePasswordAuthenticationToken.class);
+    }
+}
+```
+In order for Spring to actually use our AuthenticationService, we need to extend our Web Security configuration. We do that with an adapter for the WebSecurityConfigurer. This example overrides two configure methods:
+
+* configure(AuthenticationManagerBuilder auth): used to tell Spring to use our AuthenticationService to check user logins
+* configure(HttpSecurity http): used to configure the HttpSecurity object by chaining methods to express security requirements
+
+```
+SecurityConfig.java
+```
+```
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    private AuthenticationService authenticationService;
+
+    public SecurityConfig(AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) {
+        auth.authenticationProvider(this.authenticationService);
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/signup", "/css/**", "/js/**").permitAll()
+                .anyRequest().authenticated();
+
+        http.formLogin()
+                .loginPage("/login")
+                .permitAll();
+
+        http.formLogin()
+                .defaultSuccessUrl("/home", true);
+    }
+}
+```
+
+We can see that the second configure method does four things:
+* Allows all users to access the /signup page, as well as the css and js files.
+* Allows authenticated users to make any request that's not explicitly covered elsewhere.
+* Generates a login form at /login and allows anyone to access it.
+* Redirects successful logins to the /home page.
+
+## Key Terms
+* Onion Pattern: Sometimes also called Tiered Architecture, Multi-tiered Architecture, or n-tiered Architecture. This is a design pattern that separates areas of the application into controller, service, and data layers (and sometimes more). User flows originate from the controller tier, which passes them to the service tier, which then reaches a data access bean.
+* Encryption: Modifying data before storing it, with the intention of using another algorithm to return the data to its original form once it needs to be used.
+* Hashing: Modifying data before storing with the intention of never returning it to its original form. The modified data will be compared to other modified data only.
+* Salt: random data that is combined with the input string when hashing so that the resultant hashed values are unique for each row. This means that two users with the same password would not have the same hash in the database.
