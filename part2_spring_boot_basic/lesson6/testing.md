@@ -17,3 +17,17 @@ Often a feature will be broken up into many user stories, each of which should c
 ### Key Terms
 * Test Driven Development: a software development methodology that emphasizes writing tests before the code to be tested. This gives developers a roadmap to success - once all the tests are passing, the feature is complete!
 * User Story: User stories are short sentences derived from feature requirements in the format of As a user, I can in order to . These are used to create tests to verify the components of a feature.
+
+## Testing
+There are many different types of tests meant to validate different types of features and different layers of an application. In this course, we're going to focus on two specific types of tests: Unit tests and integration tests.
+
+Unit tests are meant to test a single unit or component of an application or process - these tests should be simple, and verify that a specific method, component, or process step acts as expected according to its inputs. Sometimes you'll also use unit tests to verify that the unit under test fails predictably, as well; it's good to test both positive and negative conditions in a unit test!
+
+Integration tests are the next layer up from unit tests. Instead of testing a single unit of an application, they test multiple units and how they integrate with one another. Often, an integration test will validate an entire user story, for example, while a unit test will validate a single step in the process a user story describes.
+
+The rule of thumb is that unit tests should be used to test invariants - conditions that do not change - and integration tests should be used to test user actions and entire process flows .
+
+### Key Terms
+* Unit Tests: A unit test only validates the smallest unit of a computational process. That might mean a test of a single method, or a single component in an application.
+* Invariants: An invariant is a law of computation, something that shouldn't change despite changing circumstances. For example, adding 0 to a number should always result in the original number, and dividing by 0 should always result in an error.
+* Integration Tests: Integration tests are intended to validate the operation of multiple application components as they interact with each other - or integrate with one another.
