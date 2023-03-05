@@ -1,4 +1,4 @@
-# Testing With JUnit and Selenium
+# Testing With JUnit and Selenium.
 ## Testing: Why and How
 ![The Test-Driven Development Lifecycle](https://user-images.githubusercontent.com/77028341/222091941-3fe76bfd-4b89-4017-afe3-ffdb4e028a23.png)
 
