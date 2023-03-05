@@ -1,4 +1,5 @@
 # JUnit in Situ
+![Red, Then Green: The Test-Driven-Development Motto](https://user-images.githubusercontent.com/77028341/222943880-dcd90f09-9330-49ae-8586-0d30a4adc851.png)
 
 When we write tests, it's with the intention to run them and report on the results. Test runners like JUnit provide many ways to report the results of a test run, but one of the most useful ways to interact with that reporting is through an IDE, like IntelliJ.
 
