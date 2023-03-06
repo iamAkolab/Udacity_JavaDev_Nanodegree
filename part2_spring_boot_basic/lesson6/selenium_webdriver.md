@@ -1,4 +1,4 @@
-# Selenium/WebDriver.
+# Selenium/WebDriver
 
 Our goal in this section is to expand our testing acumen beyond simple unit tests into the realm of integration tests. Specifically, we want to be able to test our 
 web application's abilities from the high-level perspective of user actions. In order to do this, we need a way to programmatically simulate a user's action in the 
