@@ -29,18 +29,27 @@ In this video, we looked at the basic elements of a Selenium script. Here's the 
         Thread.sleep(5000);
         driver.quit();
     }
-    ```
-Every Selenium script has to start by initializing a web driver. Since we're using WebDriverManager (documentation links below), we can use it to automatically download the binary file for Selenium's driver for Google Chrome, and then we can initialize the driver without any additional work.
+```
+Every Selenium script has to start by initializing a web driver. Since we're using WebDriverManager (documentation links below), 
+we can use it to automatically download the binary file for Selenium's driver for Google Chrome, and then we can initialize the 
+driver without any additional work.
 
-Once we have a driver, we need to tell it which web page to visit. We do this with driver.get("http://www.google.com"); in the script, but if we were testing one of our own applications, like the message page from earlier this course, we would have to change the URL to something like http://localhost:8080/home.
+Once we have a driver, we need to tell it which web page to visit. We do this with driver.get("http://www.google.com"); in the 
+script, but if we were testing one of our own applications, like the message page from earlier this course, we would have to 
+change the URL to something like http://localhost:8080/home.
 
-In order to interact with or extract data from the web page, we first need to select the required HTML elements on the page. In this example, we use driver.findElement(By.name("q")); to select the google search input element. A detailed explanation of this process can be found below.
+In order to interact with or extract data from the web page, we first need to select the required HTML elements on the page. 
+In this example, we use driver.findElement(By.name("q")); to select the google search input element. A detailed explanation of 
+this process can be found below.
 
-In order to interact with the elements we've selected, we can call various methods on them. In this case, we're using inputField.sendKeys("selenium"); to simulate typing the word selenium into google, and we're using inputField.submit(); to simulate submitting the search form.
+In order to interact with the elements we've selected, we can call various methods on them. In this case, we're using inputField.sendKeys("selenium"); 
+to simulate typing the word selenium into google, and we're using inputField.submit(); to simulate submitting the search form.
 
-Once we've interacted with the web page, we want to read in the results and print them out. Again, we use the same process for finding an element, but this time, we use driver.findElements() to get a list of matching elements, instead of a single one.
+Once we've interacted with the web page, we want to read in the results and print them out. Again, we use the same process for 
+finding an element, but this time, we use driver.findElements() to get a list of matching elements, instead of a single one.
 
-The final part of every Selenium script is shutting down the driver. Since the driver is an external program, if we don't call driver.quit(), the automated browser window will never close on its own.
+The final part of every Selenium script is shutting down the driver. Since the driver is an external program, 
+if we don't call driver.quit(), the automated browser window will never close on its own.
 
 ## Key Terms
 * Web Driver: In order for Selenium to assume control of a browser, it needs a program to interface with the specific browser's API. This program is called a web driver, and there are different web drivers for each major browser.
