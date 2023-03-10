@@ -99,3 +99,72 @@ By adding this constructor, whenever we create a new ```CounterPage``` object, S
 Now that our Page Object has selected elements from the page it represents, we can define helper methods that encapsulate common tasks for the page. In this counter example, we need to be able to read the current count from the screen, we need to be able to increment the count, and we need to reset the count. Notice that I didn't mention any specific elements to describe the functionality of these actions - while we have to be specific in our implementation of these methods, as you can see in the code above, the goal of writing these helpers is to separate the action taken on the class from the specific element interactions required to fulfill that action. In some ways, this is another instance of separation of concerns - by hiding the implementation details in these methods, if the HTML of the page ever changes, we don't have to update anything except the code inside this class - the tests that will use this class can just continue to call the same methods they did before.
 
 Speaking of tests - now that we've set up the ```CounterPage``` class, we can finally implement some tests for this app.
+
+Here's the full JUnit test class from the previous video:
+```
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class UserTestingApplicationTests {
+    @LocalServerPort
+    private Integer port;
+
+    private static WebDriver driver;
+    private CounterPage counter;
+
+    @BeforeAll
+    public static void beforeAll() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
+
+    @AfterAll
+    public static void afterAll() {
+        driver.quit();
+    }
+
+    @BeforeEach
+    public void beforeEach() {
+        driver.get("http://localhost:" + port + "/counter");
+        counter = new CounterPage(driver);
+    }
+
+    @Test
+    public void testIncrement() {
+        int prevValue = counter.getDisplayedCount();
+        counter.incrementCount();
+        assertEquals(prevValue + 1, counter.getDisplayedCount());
+    }
+
+    @Test
+    public void testIncrementTenTimes() {
+        int prevValue = counter.getDisplayedCount();
+        for (int i = 0; i < 10; i++) {
+            assertEquals(prevValue + i, counter.getDisplayedCount());
+            counter.incrementCount();
+        }
+    }
+
+    @Test
+    public void testReset() {
+        counter.resetCount(10);
+        assertEquals(10, counter.getDisplayedCount());
+        counter.resetCount(0);
+        assertEquals(0, counter.getDisplayedCount());
+    }
+
+}
+```
+
+There are a few things we have to do to set up a test file for a Spring Boot app. The main thing is that we have to make sure our server is running before the tests start - we do that here with ```@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)```. This tells JUnit to run the application before any tests are executed, with a random port number instead of the default ```8080```. This is useful because it means we can have multiple copies of the app running at the same time, which is common in development and testing environments.
+
+Of course, we need to know what the random port ends up being so that we can use Selenium's ```driver.get()``` method to navigate the browser to our app. Spring makes this easy for us with the ```@LocalServerPort``` annotation. Spring will inject the current port into a field annotated with this like the example above.
+
+As we mentioned in the video, we set up the Selenium driver in an ```@BeforeAll``` method, and we quit it in an ```@AfterAll``` method. However, the magic really starts with the ```@BeforeEach``` method - here, we navigate to the ```/countert``` URL and initialize a ```new CounterPage``` object. This means that every test will start from this URL and with a fresh ```CounterPage``` object - which makes test development extremely simple.
+
+As you can see from the rest of the tests, we simply use the helper methods we defined on ```CounterPage``` to perform all actions in and retrieve all data from the browser. This makes our test code highly legible, and each test starts to look a lot like a user story - for example, for increment, we could read the test as
+
+As a user, I can increment the count in order to see the displayed count increase by one
+
+And the code doesn't look far off from that statement! That's a truly powerful abstraction.
+
+## Key Terms
+* Page Object: a special POJO variant that can be defined for use with Selenium. A Page Object should have ```@FindBy```-annotated fields that represent the key HTML elements under test, and should have helper methods that define high-level utilities and user actions on the page under test.
