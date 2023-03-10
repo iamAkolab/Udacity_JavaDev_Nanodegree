@@ -34,7 +34,7 @@ Every Selenium script has to start by initializing a web driver. Since we're usi
 we can use it to automatically download the binary file for Selenium's driver for Google Chrome, and then we can initialize the 
 driver without any additional work.
 
-Once we have a driver, we need to tell it which web page to visit. We do this with driver.get("http://www.google.com"); in the 
+Once we have a driver, we need to tell it which web page to visit. We do this with ```driver.get("http://www.google.com");``` in the 
 script, but if we were testing one of our own applications, like the message page from earlier this course, we would have to 
 change the URL to something like http://localhost:8080/home.
 
