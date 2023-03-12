@@ -1,4 +1,4 @@
-# JUnit and Selenium
+# JUnit and Selenium.
 
 Selenium and JUnit are a natural fit for one another. Both are plain Java libraries, and don't require any special syntax or approach to integrate with one another. We can use Selenium's driver to navigate the web, interact with elements on the page, and extract data from those elements, and we can use JUnit's assertions to check the data that is returned against expected values.
 
