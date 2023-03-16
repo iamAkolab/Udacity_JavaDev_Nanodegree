@@ -1,4 +1,4 @@
-# Part 02 : Spring Boot Basics..
+# Part 02 : Spring Boot Basics.
 Learn the fundamentals of Java while being introduced to a Spring Boot framework and associated integrations and plugins.
 
 ## Module 01:  Spring Boot
