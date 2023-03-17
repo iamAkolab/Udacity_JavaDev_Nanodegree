@@ -1,11 +1,14 @@
-# Part 02 : Spring Boot Basics
-Learn the fundamentals of Java while being introduced to a Spring Boot framework and associated integrations and plugins.
+# Part 03 : Web Services and APIs
 
-## Module 01:  Spring Boot
-* Lesson 01: Introduction to the Spring Boot
-* Lesson 02:  Web Development in Java
-* Lesson 03: Spring Boot Basics for Web Development
-* Lesson 04: Spring MVC and Thymeleaf
-* Lesson 05: Data Persistence and Security
-* Lesson 06: Testing
-* Lesson 07: Project SuoerDuperDrive
+Explore the differences between web services, APIs, and microservices. Develop REST and GraphQL APIs, and learn how to secure, consume, document, and test those APIs and web services.
+
+## Module 01: Web Services and APIs
+* Lesson 01: Overview
+* Lesson 02: REST APIs
+* Lesson 03: GRAPH APIs
+* Lesson 04: Microservices
+* Lesson 05: Security
+* Lesson 06: Consuming SOAP & REST APIs
+* Lesson 07: Documentation
+* Lesson 08: Unit & Integration Testing
+* Lesson 09: Project: Build the Backend System for a Car Website
