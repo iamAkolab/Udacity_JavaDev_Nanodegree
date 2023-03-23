@@ -13,3 +13,5 @@ A client invokes a web service by sending an XML (or JSON) message, then waits f
 * Step 1: The web service provider (the person who created the web service) defines a standard format for requests and also for the responses provided.
 * Step 2: The client sends a request to the web service across the network.
 * Step 3: The web service receives the request and performs an action (like query a database or perform a calculation) and sends a response back to the calling client.
+
+# Benefits of Web Services
