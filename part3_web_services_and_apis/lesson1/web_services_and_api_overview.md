@@ -32,6 +32,6 @@ One of the most obvious differences is that web services, unlike APIs, require a
 
 Furthermore, web services are not protocol-agnostic like APIs. APIs can use any design style or protocol, but web services are restricted mostly to SOAP or Simple Object Access Protocol.
 
-Publicly Accessible API
+## Publicly Accessible API
 
 A list of publicly accessible APIs: https://github.com/public-apis/public-apis/blob/master/README.md.
