@@ -24,3 +24,14 @@ The concepts of reusability and usability allow organizations to use web service
 Send Capacity. ...
 Agility. ...
 Quality.
+
+# Web Services vs APIs vs Microservices
+
+While APIs and Webs Services are the communication interface for different architecture styles, microservices is a distinctive method to develop software systems that have well-defined interfaces and operability.
+One of the most obvious differences is that web services, unlike APIs, require a network to function. APIs can function online or offline.
+
+Furthermore, web services are not protocol-agnostic like APIs. APIs can use any design style or protocol, but web services are restricted mostly to SOAP or Simple Object Access Protocol.
+
+Publicly Accessible API
+
+A list of publicly accessible APIs: https://github.com/public-apis/public-apis/blob/master/README.md.
