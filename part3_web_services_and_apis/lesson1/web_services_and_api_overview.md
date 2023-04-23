@@ -35,3 +35,5 @@ Furthermore, web services are not protocol-agnostic like APIs. APIs can use any 
 ## Publicly Accessible API
 
 A list of publicly accessible APIs: https://github.com/public-apis/public-apis/blob/master/README.md.
+
+All web services are APIs but not all web APIs are web services.
