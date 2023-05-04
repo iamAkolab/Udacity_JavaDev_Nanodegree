@@ -1,5 +1,5 @@
 # Web Services
-## What is a Web Service?.
+## What is a Web Service?
 A web service is a way to share data between two disparate systems. The communication typically happens between a client and a server.
 * Client - The client makes a request for data.
 * Server - The server responds to the client's request.
