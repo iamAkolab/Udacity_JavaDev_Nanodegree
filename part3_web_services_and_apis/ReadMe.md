@@ -1,4 +1,4 @@
-# Part 03 : Web Services and APIs
+# Part 03 : Web Services and APIs.
 
 Explore the differences between web services, APIs, and microservices. Develop REST and GraphQL APIs, and learn how to secure, consume, document, and test those APIs and web services.
 
