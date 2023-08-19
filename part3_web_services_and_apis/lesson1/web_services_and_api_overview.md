@@ -26,12 +26,12 @@ Agility. ...
 Quality.
 
 # Web Services vs APIs vs Microservices
-
-While APIs and Webs Services are the communication interface for different architecture styles, microservices is a distinctive method to develop software systems that have well-defined interfaces and operability.
-One of the most obvious differences is that web services, unlike APIs, require a network to function. APIs can function online or offline.
+Web Services started in the early 90's, the complexiities of SOAP based web service led to REST based API
+API and Microservices are an evolution of web services. API allows for data sharing between two different applications or systems. APIs are more lightweight and streamlined and good for devices with limited bandwiths. One of the most obvious differences is that web services, unlike APIs, require a network to function. APIs can function online or offline.
 
 Furthermore, web services are not protocol-agnostic like APIs. APIs can use any design style or protocol, but web services are restricted mostly to SOAP or Simple Object Access Protocol.
 
+While APIs and Webs Services are the communication interface for different architecture styles, microservices is a distinctive method to develop software systems that have well-defined interfaces and operability.
 ## Publicly Accessible API
 
 A list of publicly accessible APIs: https://github.com/public-apis/public-apis/blob/master/README.md.
