@@ -9,7 +9,7 @@ The case study is a REST API that retrieves a list of locations from a database.
 __Step 1__: Use Spring Initializr to bootstrap a simple project.
 * Add the H2 Database, Spring Web Starter, and the Spring Data JPA dependencies before generating the project.
 
-** Step 2 **: Set-up the H2 in-memory database.
+__ Step 2 __: Set-up the H2 in-memory database.
 * Enable the console, add a path for the console, and create a url for the datasource using H2.
 
 Within application.properties (found within /src/main/resources/), you could add the following code:
