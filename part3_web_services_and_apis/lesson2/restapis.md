@@ -11,10 +11,9 @@ There are four principles that APIs follow:
 
 Example a REST API that retrieves a list of locations from a database. The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson2-restapis).
 The REST API has the following components:
-
-Controller - LocationController.java
-Service - LocationService.java and LocationServiceImpl.java
-CRUD Repository - LocationRepository.java
-Domain Entity/Model - Location.java
-H2 Database accessible via http://localhost:8080/h2/
-Tomcat Server accessible via http://localhost:8080
+* Controller - LocationController.java
+* Service - LocationService.java and LocationServiceImpl.java
+* CRUD Repository - LocationRepository.java
+* Domain Entity/Model - Location.java
+* H2 Database accessible via http://localhost:8080/h2/
+* Tomcat Server accessible via http://localhost:8080
