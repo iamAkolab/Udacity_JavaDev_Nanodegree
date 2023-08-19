@@ -31,9 +31,14 @@ API and Microservices are an evolution of web services. API allows for data shar
 
 Furthermore, web services are not protocol-agnostic like APIs. APIs can use any design style or protocol, but web services are restricted mostly to SOAP or Simple Object Access Protocol.
 
+All web services are APIs but not all web APIs are web services.
+
+
 While APIs and Webs Services are the communication interface for different architecture styles, microservices is a distinctive method to develop software systems that have well-defined interfaces and operability.
+Micorserveice are fully contained, individual component that communicated to each other and call one client and are modeled around one specific business domain. e.g location microservice
+
 ## Publicly Accessible API
 
 A list of publicly accessible APIs: https://github.com/public-apis/public-apis/blob/master/README.md.
 
-All web services are APIs but not all web APIs are web services.
+
