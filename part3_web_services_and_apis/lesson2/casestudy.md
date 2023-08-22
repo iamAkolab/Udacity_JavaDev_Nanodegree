@@ -1,4 +1,4 @@
-# Case Study: Intro & Maven Dependencies
+# Case Study: Intro & Maven Dependencies,
 The case study is a REST API that retrieves a list of locations from a database. The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson2-restapis)
 
 * spring-boot-starter-web - This starter pack is used for web application development and automatically adds libraries like Spring MVC, REST, Tomcat, and Jackson.
