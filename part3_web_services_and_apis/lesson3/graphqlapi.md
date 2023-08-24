@@ -13,6 +13,7 @@ The GraphQL schema defines the data points offered via an API. The schema contai
 
 The schema from the Case Study is shown below.
 
+```
 type Location {
  id: ID!
  name: String!
@@ -28,6 +29,7 @@ type Mutation {
  deleteLocation(id:ID!) : Boolean
  updateLocationName(newName: String!, id:ID!) : Location!
 }
+```
 
 GraphQL offers operations on data like queries and mutations.
 
