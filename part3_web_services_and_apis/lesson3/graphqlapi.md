@@ -38,3 +38,6 @@ A query allows for the retrieving of data. Each query will have a specific objec
 
 ## Mutations
 GraphQL has the ability to update the data stored on the server, by means of mutations. Mutations, such as, create, update, or delete will change the data, unlike a query.
+
+## GraphiQL
+A tool called GraphiQL is a simple web app that is able to communicate with any GraphQL Server and execute queries and mutations against it.
