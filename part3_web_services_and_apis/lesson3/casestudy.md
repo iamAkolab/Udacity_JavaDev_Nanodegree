@@ -16,7 +16,7 @@ The REST API has the following components:
 * GraphiQL console accessible via http://localhost:8080/graphiql
 
 ```
-__Sample Queries/Mutations__
+Sample Queries/Mutations
 {
   findAllApplications {
     id
@@ -24,6 +24,7 @@ __Sample Queries/Mutations__
     address
   }
 }
+
 mutation {
   newLocation(
     name: "MBJ Airport",
@@ -33,7 +34,9 @@ mutation {
       address
     }
 }
-```
+
 mutation {
   deleteLocation(id:1)
 }
+
+```
