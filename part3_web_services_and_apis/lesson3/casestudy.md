@@ -146,3 +146,184 @@ public interface DogRepository extends CrudRepository<Dog, Long> {
 ```
 __What about the service and controller?__
 We don't need these to implement a GraphQL API. If you still want to have a REST API available, you can add those files to the application as well, and the same endpoints as before will be available.
+
+## LAB III
+__Step 1__: Create resolvers that implement GraphQLQueryResolver.
+* The query resolver should match the operations in the GraphQL schema.
+ * Query
+ * findDogBreeds
+ * findDogBreedById
+ * findAllDogNames
+* Mutation
+ * deleteDogBreed
+ * updateDogName
+First, create a resolver package and then add a new class Query that implements GraphQLQueryResolver. We just need to add the queries we put in dog.graphqls earlier.
+
+I already added some of the necessary error handling in findDogById for Step 2 here, but it's essentially the same for this file as what you saw for the REST API.
+```
+package com.udacity.DogGraphQL.resolver;
+
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+import com.udacity.DogGraphQL.entity.Dog;
+import com.udacity.DogGraphQL.exception.DogNotFoundException;
+import com.udacity.DogGraphQL.repository.DogRepository;
+import org.springframework.stereotype.Component;
+
+import java.util.Optional;
+
+@Component
+public class Query implements GraphQLQueryResolver {
+    private DogRepository dogRepository;
+
+    public Query(DogRepository dogRepository) {
+        this.dogRepository = dogRepository;
+    }
+
+    public Iterable<Dog> findAllDogs() {
+        return dogRepository.findAll();
+    }
+
+    public Dog findDogById(Long id) {
+        Optional<Dog> optionalDog = dogRepository.findById(id);
+        if (optionalDog.isPresent()) {
+            return optionalDog.get();
+        } else {
+            throw new DogNotFoundException("Dog Not Found", id);
+        }
+    }
+}
+```
+Next up are the mutators. Create a mutator package and then add a new class Mutation that implements GraphQLMutationResolver.
+
+In these mutations, I am first using the findAll() query from the DogRepository, then processing to get the relevant entry (if available), and perform the requested operation. There are lots of ways to do this - you could instead add some additional queries to DogRepository to help, querying for just a single Dog by ID, for instance.
+
+As with the queries, I've gone ahead and added the exception handling for Step 2 already for simplicity. The one for deleteDogBreed is not required in this exercise, but probably helpful for a user.
+```
+package com.udacity.DogGraphQL.mutator;
+
+import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+import com.udacity.DogGraphQL.entity.Dog;
+import com.udacity.DogGraphQL.exception.BreedNotFoundException;
+import com.udacity.DogGraphQL.exception.DogNotFoundException;
+import com.udacity.DogGraphQL.repository.DogRepository;
+import org.springframework.stereotype.Component;
+
+import java.util.Optional;
+
+@Component
+public class Mutation implements GraphQLMutationResolver {
+    private DogRepository dogRepository;
+
+    public Mutation(DogRepository dogRepository) {
+        this.dogRepository = dogRepository;
+    }
+
+    public boolean deleteDogBreed(String breed) {
+        boolean deleted = false;
+        Iterable<Dog> allDogs = dogRepository.findAll();
+        // Loop through all dogs to check their breed
+        for (Dog d:allDogs) {
+           if (d.getBreed().equals(breed)) {
+               // Delete if the breed is found
+               dogRepository.delete(d);
+               deleted = true;
+           }
+        }
+        // Throw an exception if the breed doesn't exist
+        if (!deleted) {
+            throw new BreedNotFoundException("Breed Not Found", breed);
+        }
+        return deleted;
+    }
+
+    public Dog updateDogName(String newName, Long id) {
+        Optional<Dog> optionalDog = dogRepository.findById(id);
+
+        if (optionalDog.isPresent()) {
+            Dog dog = optionalDog.get();
+            // Set the new name and save the updated dog
+            dog.setName(newName);
+            dogRepository.save(dog);
+            return dog;
+        } else {
+            throw new DogNotFoundException("Dog Not Found", id);
+        }
+    }
+}
+```
+__Step 2__: Make sure errors are handled appropriately.
+If an id is requested that doesn’t exist, appropriately handle the error
+Some of this has been handled in the above for the Query and Mutation. You might be tempted to fully re-use your code for DogNotFoundException from earlier, but we need a few changes for it to work properly with GraphQL (note that if you were also adding on a separate REST API using a service and controller, you may want to use separate exception handling for it). This time, you'll want to have it implement a GraphQLError, and no longer use the @ResponseStatus annotation we used with the REST API.
+```
+package com.udacity.DogGraphQL.exception;
+
+import graphql.ErrorType;
+import graphql.GraphQLError;
+import graphql.language.SourceLocation;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class DogNotFoundException extends RuntimeException implements GraphQLError {
+
+    private Map<String, Object> extensions = new HashMap<>();
+
+    public DogNotFoundException(String message, Long invalidDogId) {
+        super(message);
+        extensions.put("invalidDogId", invalidDogId);
+    }
+
+    @Override
+    public List<SourceLocation> getLocations() {
+        return null;
+    }
+
+    @Override
+    public Map<String, Object> getExtensions() {
+        return extensions;
+    }
+
+    @Override
+    public ErrorType getErrorType() {
+        return ErrorType.DataFetchingException;
+    }
+}
+```
+If you are also wanting to implement the BreedNotFoundException, you can essentially just slightly alter the DogNotFoundException to do so. You could of course also potentially combine these into one exception file if you get a little more creative with the Exception itself.
+```
+package com.udacity.DogGraphQL.exception;
+
+import graphql.ErrorType;
+import graphql.GraphQLError;
+import graphql.language.SourceLocation;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BreedNotFoundException extends RuntimeException implements GraphQLError {
+
+    private Map<String, Object> extensions = new HashMap<>();
+
+    public BreedNotFoundException(String message, String invalidBreed) {
+        super(message);
+        extensions.put("invalidBreedId", invalidBreed);
+    }
+
+    @Override
+    public List<SourceLocation> getLocations() {
+        return null;
+    }
+
+    @Override
+    public Map<String, Object> getExtensions() {
+        return extensions;
+    }
+
+    @Override
+    public ErrorType getErrorType() {
+        return ErrorType.DataFetchingException;
+    }
+}
+```
