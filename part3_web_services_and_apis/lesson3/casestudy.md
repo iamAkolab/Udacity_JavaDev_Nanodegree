@@ -122,3 +122,19 @@ type Mutation {
 }
 ```
 Now, you may be thinking I did not actually implement the query operations that were requested. But wait - using GraphQL, the user will be able to specify which fields they want from a query. So, simply by adding the queries for find all dogs (where they can request only breed, or only names), and finding a dog by id (where they can request just the breed), these operations actually exist.
+
+__Step 3__: Create a repository that extends CrudRepository.
+ * This repository is for creating, reading, updating, and deleting Dog objects.
+Depending on how you implemented your DogRepository for the REST API, you may be able to completely re-use your code here. I actually chose to completely remove any queries from within the DogRepository, as there are already built-in methods for a CrudRepository that findAll and findById.
+
+```
+package com.udacity.DogGraphQL.repository;
+
+import com.udacity.DogGraphQL.entity.Dog;
+import org.springframework.data.repository.CrudRepository;
+
+public interface DogRepository extends CrudRepository<Dog, Long> {
+}
+```
+__What about the service and controller?__
+We don't need these to implement a GraphQL API. If you still want to have a REST API available, you can add those files to the application as well, and the same endpoints as before will be available.
