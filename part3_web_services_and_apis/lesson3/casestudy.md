@@ -85,3 +85,40 @@ graphiql.mapping=graphiql
 ```
 
 ## LAB II
+__Step 1__: Create an entity called Dog.
+* The dog should have three attributes:
+ * Name
+ * Breed
+ * Origin
+You can re-use your code from the REST API for the Dog entity, just make sure to update the package name accordingly!
+
+__Step 2__: Create a GraphQL schema.
+* The schema should match the fields found in the Dog entity.
+* Add the following query operations:
+ * findDogBreeds
+ * findDogBreedById
+ * findAllDogNames
+* Add the following mutators:
+ * deleteDogBreed
+ * updateDogName
+
+Following the video, create a graphql package within the resources directory of the project. Within that package, add a dog.graphqls file (you can add as a text file in IntelliJ if you do not have the GraphQL plug-in yet).
+```
+type Dog {
+    id: ID!
+    name: String!
+    breed: String!
+    origin: String!
+}
+
+type Query {
+    findAllDogs: [Dog]!
+    findDogById(id:ID!): Dog!
+}
+
+type Mutation {
+    deleteDogBreed(breed:String!) : Boolean
+    updateDogName(newName: String!, id:ID!) : Dog!
+}
+```
+Now, you may be thinking I did not actually implement the query operations that were requested. But wait - using GraphQL, the user will be able to specify which fields they want from a query. So, simply by adding the queries for find all dogs (where they can request only breed, or only names), and finding a dog by id (where they can request just the breed), these operations actually exist.
