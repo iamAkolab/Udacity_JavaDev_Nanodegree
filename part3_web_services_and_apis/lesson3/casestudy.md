@@ -1,4 +1,4 @@
-# GraphQL Case Study Steps
+# GraphQL Case Study Steps.
 
 The case study is a GraphQL API that retrieves a list of locations from a database. The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson3-graphql).
 
