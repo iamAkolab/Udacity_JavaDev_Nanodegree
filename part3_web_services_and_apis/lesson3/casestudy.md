@@ -327,3 +327,151 @@ public class BreedNotFoundException extends RuntimeException implements GraphQLE
     }
 }
 ```
+
+## LAB IV
+__Step 1__: Create a data.sql file.
+* The file should create sample dog data in the database.
+You can re-use your previous data.sql file or make a new one.
+
+__Step 2__: Check that the GraphQL API works appropriately.
+First, check that your schema shows appropriately at http://localhost:8080/graphql/schema.json. You might consider getting a browser extension or another tool to show formatted json as well, otherwise this will look like a large wall of text.
+Now, let's go to Postman to test out whether the queries and mutators we want actually work.
+
+First, make sure you are using a POST request, then add our graphQL URL http://localhost:8080/graphql to the app. Then, Make sure to add a Header with Content-Type as application/json.
+Now, we can test out our queries. Let's look at an example for how a user would accomplish their needs based on the lab query operations. I also added id below to know which belongs to each dog, but they could just as easily skip that and only return the specific data they want (you need at least one item selected with GraphQL, and can do multiple at once - but you cannot grab all data without specifying each individual field).
+
+For each of these below, enter them into "Body" in Postman and then "Send" the request.
+
+findDogBreeds
+```
+{
+	"query":"{findAllDogs { id breed } }"
+}
+```
+which returns:
+
+```
+{
+    "data": {
+        "findAllDogs": [
+            {
+                "id": "1",
+                "breed": "Pomeranian"
+            },
+            {
+                "id": "2",
+                "breed": "Pit Bull"
+            },
+            {
+                "id": "3",
+                "breed": "Cocker Spaniel"
+            },
+            {
+                "id": "4",
+                "breed": "Direwolf"
+            },
+            {
+                "id": "5",
+                "breed": "Husky"
+            }
+        ]
+    }
+}
+```
+
+findDogBreedById
+```
+{
+	"query":"{findAllDogs { id breed } }"
+}
+```
+which returns:
+```
+{
+    "data": {
+        "findDogById": {
+            "id": "1",
+            "breed": "Pomeranian"
+        }
+    }
+}
+```
+
+You should also try out an invalid ID with this to check your error handling. As part of the returned JSON, I got Exception while fetching data (/findDogById) : Dog Not Found.
+
+
+findAllDogNames
+```
+{
+	"query":"{findAllDogs { id name } }"
+}
+```
+which returns:
+```
+{
+    "data": {
+        "findAllDogs": [
+            {
+                "id": "1",
+                "name": "Fluffy"
+            },
+            {
+                "id": "2",
+                "name": "Spot"
+            },
+            {
+                "id": "3",
+                "name": "Ginger"
+            },
+            {
+                "id": "4",
+                "name": "Lady"
+            },
+            {
+                "id": "5",
+                "name": "Sasha"
+            }
+        ]
+    }
+}
+```
+## Mutations
+Let's say we want to change the name of dog four to "Ghost". There's a slightly different syntax, that needs mutation included in the query as well. Also, make sure to use the escape character \ to include quotation marks for strings.
+
+updateDogName
+```
+{
+	"query":"mutation {updateDogName(newName:\"Ghost\", id:4) { id name breed } }"
+}
+```
+which returns:
+```
+{
+    "data": {
+        "updateDogName": {
+            "id": "4",
+            "name": "Ghost",
+            "breed": "Direwolf"
+        }
+    }
+}
+```
+Make sure to test out an invalid ID here too!
+
+
+deleteDogBreed
+For this, you do not need to add the field specifications afterward.
+```
+{
+	"query":"mutation {deleteDogBreed(breed:\"Pomeranian\")}"
+}
+```
+which returns:
+```
+{
+    "data": {
+        "deleteDogBreed": true
+    }
+}
+```
+If you added an Exception for a missing breed, make sure to test that here too
