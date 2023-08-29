@@ -61,7 +61,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 Note in the above that all of the . functions are actually chain together, but are on separate lines so that someone reading the code can more easily understand it.
 
-Step 3: Test that your API is now secured.
+__Step 3__: Test that your API is now secured.
 * It should use basic authentication
 * The API should still operate appropriately for an authenticated user
 You can test this out in multiple ways. First, I tried to access localhost:8080/dogs in the browser, and got a "Sign in" window. If I click cancel, I get a 401 error - Unauthorized. If I enter in my basic authentication information, I can access the page.
