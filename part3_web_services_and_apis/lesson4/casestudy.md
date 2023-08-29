@@ -46,5 +46,5 @@ public class EurekaApplication {
 
 }
 ```
-Step 2: Use a web browser to view the Eureka web console.
+__Step 2__: Use a web browser to view the Eureka web console.
 Navigate to http://localhost:8761/ on your computer to view the Eureka web console. Note again that Eureka servers are typically put on port 8761, but if you would have used a different server port in application.properties, you would instead navigate to that port.
