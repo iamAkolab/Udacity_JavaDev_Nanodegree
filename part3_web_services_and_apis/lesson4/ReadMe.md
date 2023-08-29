@@ -1,4 +1,4 @@
-# Microservices
+# Microservices.
 
 N-Tier and monolithic applications used to be the de facto standard. In one single binary web artifact, like an EAR or WAR file, there would be a layered architecture with the decomposition of code into more functional components.
 
