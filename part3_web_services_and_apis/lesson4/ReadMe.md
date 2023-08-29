@@ -22,6 +22,35 @@ __Features__
 * MSA provides systems that are resilient because failures are isolated and don’t cascade through the infrastructure.
 
 ## Case Study: Eureka Server
-Eureka, created by Netflix, is responsible for the registration and discovery microservices. Spring has incorporated Eureka into Spring Cloud, making it even easier to stand up a Eureka server.
+Eureka, created by Netflix, is responsible for the registration and discovery microservices. Spring has incorporated Eureka into [Spring Cloud](https://spring.io/projects/spring-cloud), making it even easier to stand up a Eureka server.
 
 Eureka consists of a server and a client-side component. The server component will be the registry in which all the microservices register their availability. The microservices use the Eureka client to register; once the registration is complete, it notifies the server of its existence.
+
+
+The case study is an online ordering service. There are multiple services that work together to create the system.
+
+Item Service
+Order Service
+Shipping Service
+Each service has its own database. For this case study, instead of building out the entire system, we will focus on the Item Service. The code can be cloned from GitLab.
+
+The project has the following components:
+
+Eureka Module
+* Eureka Registry accessible via http://localhost:8761
+
+Items Microservices Module
+CRUD Repository - ItemRepository.java
+Domain Entity/Model -Item.java
+H2 Database accessible via http://localhost:8080/h2/
+Tomcat Server accessible via http://localhost:8080
+Items Microservice accessible via http://localhost:8080/items
+Troubleshooting
+You may need this additional dependency in your POM file for the Eureka server to load:
+```
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.4.0-b180725.0427</version>
+</dependency>
+```
