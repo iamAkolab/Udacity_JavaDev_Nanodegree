@@ -20,3 +20,19 @@ Spring Security is a part of the Spring Framework and provides authentication, a
 | ------------- |:-------------:| 
 | spring-boot-starter-security	| Maven dependency that adds security module.|
 | @EnableWebSecurity	| Annotation that enables Spring Security’s support. |
+
+## Example
+The Security case study retrieves a list of locations from a database in a secure fashion. The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson5-security).
+
+The API has the following components:
+
+* Controller - LocationController.java
+* Service - LocationService.java and LocationServiceImpl.java
+* CRUD Repository - LocationRepository.java
+* Domain Entity/Model - Location.java
+* Security Configuration - SpringSecurityConfig.java
+* H2 Database accessible via http://localhost:8080/h2/
+* Tomcat Server accessible via http://localhost:8080
+
+__CSRF__
+Read more about Cross Site Request Forgery [here](https://en.m.wikipedia.org/wiki/Cross-site_request_forgery).
