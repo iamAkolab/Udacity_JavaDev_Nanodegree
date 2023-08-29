@@ -13,7 +13,6 @@ There are several disadvantages to the n-tier monolithic application architectur
 * A big monolithic application that makes code reuse and sharing of components difficult.
 
 The Microservices Architecture (MSA) decomposes systems into discrete, individual, standalone components that can communicate amongst themselves, working together or with external systems.
-
 MSA is a more agile framework that fits well with the cloud-based world and lends itself well to web application development and web service development.
 
 __Features__
