@@ -21,3 +21,32 @@ The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-ja
  "punchline":"They work on so many levels."
 }
 
+# Consuming SOAP
+There may be times when you want to consume a SOAP-based web service in your applications. Spring Web Services makes this process easy by automatically generating the files you need in order to consume a SOAP-based web service. In order to generate the files, the WSDL for the SOAP service in question is needed. WSDL stands for Web Services Description Language and simply describes the web service: its location and the operations allowed. Spring Web Services is contract-first only. This means that you need to start from a contract definition (XSD or WSDL) to generate the files.
+
+## Dependencies
+The spring-boot-starter-web-services dependency includes the needed dependencies for using Spring Web Services.
+
+## Generate Java Files
+To generate Java classes from the WSDL in maven, you need the following plugin setup:
+```
+<plugin>
+   <groupId>org.jvnet.jaxb2.maven2</groupId>
+  <artifactId>maven-jaxb2-plugin</artifactId>
+  <version>0.14.0</version>
+	<executions>
+		<execution>
+			<goals>
+				<goal>generate</goal>
+			</goals>
+		</execution>
+	</executions>
+       <configuration>
+		<schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>
+		 <schemaIncludes>
+			<include>*.wsdl</include>
+		</schemaIncludes>
+	</configuration>
+</plugin>
+```
+This plugin uses JAXB, which generates the Java classes and handles the mapping of XML to Java and vice versa. In order to generate the Java files, run the mvn generate-sources Maven command. This can easily be done via the command line or through IntelliJ. This results in a number of generated Java classes under /target/generated-sources/xjc. Once you have the generated code, you can create a web service client by simply extending the WebServiceGatewaySupport class and coding your operations.
