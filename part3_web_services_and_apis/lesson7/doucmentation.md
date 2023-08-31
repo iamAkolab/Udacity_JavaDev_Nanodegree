@@ -32,3 +32,36 @@ __Dependencies__
     <scope>compile</scope>
 </dependency>
 ```
+# Swagger Configuration
+
+The configuration of Swagger mainly centers around the Docket bean.
+```
+@Configuration
+@EnableSwagger2
+
+public class SwaggerConfig {
+   @Bean
+   public Docket api() {
+       return new Docket(DocumentationType.SWAGGER_2)
+               .select()
+               .apis(RequestHandlerSelectors.any())
+               .paths(PathSelectors.any())
+               .build();
+   }
+}
+```
+Swagger also provides some default values in its response that you can customize, such as “Api Documentation”, “Created by Contact Email”, “Apache 2.0”. To change these values, you can use the apiInfo(ApiInfo apiInfo) method.
+
+## Case Study: Swagger Configuration
+The case study to be documented is a REST API that retrieves a list of locations from a database. The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson7-documenting).
+
+The REST API has the following components:
+
+* Controller - LocationController.java
+* Service - LocationService.java and LocationServiceImpl.java
+* CRUD Repository - LocationRepository.java
+* Domain Entity/Model - Location.java
+* Swagger Config - SwaggerConfig.java
+* H2 Database accessible via http://localhost:8080/h2/
+* Tomcat Server accessible via http://localhost:8080
+* Swagger UI via http://localhost:8080/swagger-ui.html
