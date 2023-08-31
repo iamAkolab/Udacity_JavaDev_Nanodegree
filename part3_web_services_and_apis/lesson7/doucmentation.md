@@ -1,4 +1,4 @@
-# 
+# Introduction
 It’s very important to document your REST APIs. There could be other developers that need to use your APIs or you may have customers that want to use your APIs to help speed up their development time.
 
 Documentation is a good way to communicate to others how they can use your APIs. Documentation communicates the operations available, the format for requesting data and the format data will be returned in.
