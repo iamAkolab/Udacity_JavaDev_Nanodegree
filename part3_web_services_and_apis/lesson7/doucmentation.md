@@ -65,3 +65,21 @@ The REST API has the following components:
 * H2 Database accessible via http://localhost:8080/h2/
 * Tomcat Server accessible via http://localhost:8080
 * Swagger UI via http://localhost:8080/swagger-ui.html
+
+# Customizing Swagger
+It is not always desirable to expose the documentation for your entire API. You can restrict swagger's response by passing parameters to apis() and paths() methods. Swagger also allows you to override response messages on HTTP methods.
+
+Case Study: Error Messages
+You can turn off default response messages 
+```
+@Bean
+public Docket api() {
+    return new Docket(DocumentationType.SWAGGER_2)
+            .select()
+            .apis(RequestHandlerSelectors.any())
+            .paths(PathsSelectors.any())
+            .build()
+            .useDefaultResponseMessages(false)
+}
+```
+and define your own using the @ApiResponses annotation
