@@ -57,3 +57,18 @@ You may need this additional dependency in your POM file for the Eureka server t
     <version>2.4.0-b180725.0427</version>
 </dependency>
 ```
+
+# Spring Data Rest
+Spring Data REST makes it easy to expose microservices. Spring Data REST builds on top of Spring Data repositories and automatically exports those as REST resources.
+
+So how does Spring Data Rest work?
+
+* 1. At application startup, Spring Data Rest finds all of the spring data repositories
+* 2. Then, Spring Data Rest creates an endpoint that matches the entity name
+* 3. Next, Spring Data Rest appends an S to the entity name in the endpoint
+* 4. Lastly, Spring Data Rest exposes CRUD (Create, Read, Update, and Delete) operations as RESTful APIs over HTTP
+
+There is no need to create a controller or service layer!
+
+# Microservice Registration
+For a @SpringBootApplication to be discovery-aware, all that's needed is the Spring Discovery Client (i.e., spring-cloud-starter-netflix-eureka-client dependency) in the classpath. The next step is to annotate the main Spring application class with the @EnableEurekaClient annotation. @EnableEurekaClient is optional if the spring-cloud-starter-netflix-eureka-client dependency is on the classpath.
