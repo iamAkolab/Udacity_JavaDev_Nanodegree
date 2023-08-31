@@ -50,3 +50,12 @@ To generate Java classes from the WSDL in maven, you need the following plugin s
 </plugin>
 ```
 This plugin uses JAXB, which generates the Java classes and handles the mapping of XML to Java and vice versa. In order to generate the Java files, run the mvn generate-sources Maven command. This can easily be done via the command line or through IntelliJ. This results in a number of generated Java classes under /target/generated-sources/xjc. Once you have the generated code, you can create a web service client by simply extending the WebServiceGatewaySupport class and coding your operations.
+
+## SOAP Case Study
+The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson6-consuming/consuming%20soap). The publicly accessible web service is [NumberToWords](https://www.dataaccess.com/webservicesserver/NumberConversion.wso?op=NumberToWords), implemented by DataFlex, converts numbers to its word version. The [WSDL](http://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL) file defines the operations available.
+```
+2391
+<string>two thousand three hundred and ninety one </string>
+53429
+<string>fifty three thousand four hundred and twenty nine </string>
+```
