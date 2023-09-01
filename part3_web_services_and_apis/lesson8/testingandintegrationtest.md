@@ -36,3 +36,13 @@ __Unit Testing Components__
 
 __Integration Testing Components__
 * LocationControllerIntegrationTest.java
+
+
+# Integration Testing
+Integration testing allows for testing of the entire application (and all of its layers) as opposed to just individual components.
+
+The @SpringBootTest annotation is useful for integration testing and is chosen over @WebMvcTest because @SpringBootTest starts the full application context (including the server) and does not customize component scanning at all.
+
+@SpringBootTest will look for the main configuration class, annotated with@SpringBootTest and use that to start a Spring application context that simulates a calling client.
+
+
