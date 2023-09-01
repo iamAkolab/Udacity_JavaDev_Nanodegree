@@ -21,7 +21,7 @@ We will first look at unit testing REST APIs using [JUnit](https://junit.org/jun
 * @WebMvcTest is used for controller layer unit testing.
 
 ## Case Study: Unit Testing
-The code can be cloned from GitLab.
+The code can be cloned from [GitLab](https://gitlab.com/videolearning/udacity-java/tree/master/Lesson8-testing).
 
 __REST API Components__
 * Controller - LocationController.java
