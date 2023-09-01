@@ -46,3 +46,8 @@ The @SpringBootTest annotation is useful for integration testing and is chosen o
 @SpringBootTest will look for the main configuration class, annotated with@SpringBootTest and use that to start a Spring application context that simulates a calling client.
 
 
+# Lab: Test Your Dog API
+Reuse your Dog REST API code from Lesson 2 and create unit and integration tests for it.
+
+* __Step 1__: Create a unit test for your API using the @WebMvcTest annotation.
+* __Step 2__: Create an integration test for your API using the @SpringBootTest annotation.
