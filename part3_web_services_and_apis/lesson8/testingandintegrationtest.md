@@ -11,3 +11,11 @@ Dependency
 </dependency>
 ```
 Spring-boot-starter-test imports both Spring Boot test modules as well as JUnit, AssertJ, Hamcrest, and a number of other useful libraries.
+
+# Unit Testing
+We will first look at unit testing REST APIs using [JUnit](https://junit.org/junit5/), [Mockito](https://site.mockito.org/) and [Spring Test](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/MockMvc.html) (also known as, MockMVC).
+
+* JUnit is a popular unit testing framework that allows you to test individual units of source code.
+* Mockito is a great mocking framework which provices data for JUnit tests.
+* @MockBean works well with the Mockito library.
+* @WebMvcTest is used for controller layer unit testing.
