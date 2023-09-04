@@ -1,7 +1,7 @@
 # Part 04 : Data Stores & Persistence
 Build applications that read and write to relational databases using both the Java Persistence API (JPA) and SQL. Use standard design patterns to make your persistence layer easy to test and integrate with a Spring Boot application.
 
-Module 01: Data Stores & Persistence
+## Module 01: Data Stores & Persistence
 
 * Lesson 01: Introduction to Data Stores & Persistence
 * Lesson 02: Data in Multitier Architecture
