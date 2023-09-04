@@ -1,5 +1,6 @@
 # Part 04 : Data Stores & Persistence
 Build applications that read and write to relational databases using both the Java Persistence API (JPA) and SQL. Use standard design patterns to make your persistence layer easy to test and integrate with a Spring Boot application.
+
 ![image](https://github.com/iamAkolab/udacity_javadev_nanodegree/assets/77028341/a8dccb92-3f83-44fe-9293-032a8920802b)
 
 
