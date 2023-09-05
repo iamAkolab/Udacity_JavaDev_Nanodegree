@@ -4,4 +4,4 @@ Multitier Architecture is a term used to refer to a form of design that separate
 Entities are used to negotiate between:
 
 * The object representation of data in Java.
-*The table representation of data in a database.
+* The table representation of data in a database.
