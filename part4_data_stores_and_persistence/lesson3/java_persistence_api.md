@@ -1,4 +1,5 @@
 # Introduction to the Java Persistence API
+![image](https://github.com/iamAkolab/udacity_javadev_nanodegree/assets/77028341/3a6ee8ff-daf1-4df4-9ddc-209b86d0105b)
 
 ## __Lesson Outline__
 * Persistence Context
