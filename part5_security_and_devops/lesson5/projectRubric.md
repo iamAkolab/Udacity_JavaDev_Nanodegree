@@ -1,5 +1,5 @@
-Project: eCommerce Application
-Authentication and Authorization
+# Project: eCommerce Application
+## Authentication and Authorization
 Success Criteria	Specifications
 Demonstrate appropriate repository management using git.
 
