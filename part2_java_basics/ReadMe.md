@@ -5,7 +5,7 @@ Learn the fundamentals of Java while being introduced to a Spring Boot framework
 * Collections
 * Exception and IO
 
-# Big-O Notation
+# Big-O Notation.
 | Notation | Name   | Example   |
 | :---:    | :---:  | :---:     |
 |    O(1)  | Constant time  | Int a = 1 + 5   |
